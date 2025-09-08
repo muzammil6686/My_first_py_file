@@ -1,0 +1,21 @@
+def user_input_list():
+    record=[]
+    name=input("enter your name")
+    age=input("enter your age")
+    password=input("enter your password")
+    data={"name":name,
+        "age":age,
+        "password": password,
+    } 
+    record.append(data)
+    while True:
+        user = input("apo kya dekhna chahte ho : (name,age,password)")
+        if user in data:
+            print (f"appka {user} hai : {data[user]}") 
+        else:
+            print ("aapne koi option choose nahi kya :") 
+
+        exit=input(" kya aap ko kuch or dekhna hai kya (yes/no)")
+        if exit.lower() == "no": 
+            print (" aapka bahot bahot shukriya:") 
+            break
